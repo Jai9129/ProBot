@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M250 100 C 350 100, 400 150, 400 250 C 400 350, 350 400, 250 400 C 150 400, 100 350, 100 250 C 100 150, 150 100, 250 100" 
+                          fill="none" 
+                          stroke="#E91E63" 
+                          stroke-width="60"
+                          stroke-linecap="round"/>
+                </svg>
+                <h1>ProBot</h1>
+            </div>
+            <p class="description">
+                Compress your JPEG and PNG images while maintaining quality. Upload images, select compression level, and download the optimized version instantly.
+            </p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="upload-area" id="dropZone">
+                    <div class="upload-content">
+                        <svg class="upload-icon" width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4V20M4 12H20" stroke="#666" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <p>Drop Your Files Here</p>
+                        <span>or</span>
+                        <button class="upload-btn" id="uploadBtn">UPLOAD FILES</button>
+                        <input type="file" id="fileInput" accept="image/jpeg,image/png" multiple hidden>
+                    </div>
+                </div>
+
+                <div class="compression-controls">
+                    <label for="quality">Compression Level:</label>
+                    <select id="quality">
+                        <option value="0.8">Low Compression</option>
+                        <option value="0.6">Medium Compression</option>
+                        <option value="0.4">High Compression</option>
+                    </select>
+                </div>
+
+                <div class="image-preview" id="imagePreview"></div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>Copyright © ProBot 2025. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
